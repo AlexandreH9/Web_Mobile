@@ -1,0 +1,20 @@
+<div>
+    <form>
+        <input type="text" ng-model="user.username" placeholder="Username"><br>
+        <input type="text" ng-model="user.email" placeholder="Email"><br>
+        <input type="password" ng-model="user.password" placeholder="Password">
+        <button ng-click="register()">Register</button>
+    </form>
+
+    <div>
+        <a href="/#!/login">Login</a>
+    </div>
+
+
+    <div>
+        <button ng-click="refresh()">Refresh</button>
+        <ul>
+            <li ng-repeat="user in users">{{ user.username }}</li>
+        </ul>
+    </div>
+</div>
