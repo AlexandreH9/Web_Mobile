@@ -1,12 +1,12 @@
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
-var jwt = require("jwt-simple");
 require('./config');
 
 var app = express();
 
 app.set('view engine', 'ejs');
+// app.set('superSecretMotherFucker', config.secret);
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
