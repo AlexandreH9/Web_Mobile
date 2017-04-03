@@ -4,13 +4,15 @@
 var router = require('express').Router();
 var jwt = require('jsonwebtoken');
 var User = require('../../../../models/User');
+var hash = require('../../../../helpers/hash');
+var bodyParser = require('body-parser');
 var passport = require("passport");
 var passportJWT = require("passport-jwt");
 var ExtractJwt = passportJWT.ExtractJwt;
 var Strategy = passportJWT.Strategy;
-var conf = require('../../../../config');
 
-//=================First method===============
+
+//=================First method===============FAIL
 
 // router.post('/login', function (req, res) {
 //     User.findOne({
@@ -42,31 +44,52 @@ var conf = require('../../../../config');
 
 //=================Second method===============
 
-var params = {
-    secretOrKey: conf.jwtSecret,
-    jwtFromRequest: ExtractJwt.fromAuthHeader()
-};
+var jwtOptions = {};
+jwtOptions.jwtFromRequest = ExtractJwt.fromAuthHeader();
+jwtOptions.secretOrKey = "superSecretMotherFucker";
 
-//Ou sont save les users ????
+var strat = new Strategy(jwtOptions, function(data, done) {
+    console.log('data received', data);
+    User.findOne({_id: data.id}, function(error, user) {
 
-module.exports = function() {
-    var strategy = new Strategy(params, function(payload, done) {
-        var user = users[payload.id] || null;
+        if (!user) {
+            res.status(401).json({message:"Nope ID"});
+        }
         if (user) {
-            return done(null, {
-                id: user.id
-            });
-        } else {
-            return done(new Error("User not found"), null);
+            done(null, user)
         }
+        else {
+            done(null, false);
+        }
+
     });
-    passport.use(strategy);
-    return {
-        initialize: function() {
-            return passport.initialize();
-        },
-        authenticate: function() {
-            return passport.authenticate("jwt", cfg.jwtSession);
-        }
-    };
-};
+
+});
+
+passport.use(strat);
+router.use(passport.initialize());
+router.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+
+router.post("/", function(req, res) {
+    User.findOne({username: req.body.username}, function(err, user) {
+        if (!user) {
+                res.status(401).json({message: 'User Nope'});
+            }
+            else if (user) {
+                if (hash.hashPassword(req.body.password) != req.body.password) {
+                    res.status(401).json({message: 'Mdp Nope'});
+                }
+                else {
+                    var data = {id: user.id};
+                    var token = jwt.sign(data, jwtOptions.secretOrKey);
+                    res.json({message:'Yep', token: token});
+                }
+            }
+    });
+});
+
+module.exports = router;
+
