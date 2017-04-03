@@ -13,13 +13,20 @@ router.post('/', function(req, res) {
     var email = req.body.email;
     var password = req.body.password;
 
-    var newUser = new User({
-        username: username,
-        email: email,
-        password: hash.hashPassword(password)
-    }).save().then(function(userSaved) {
-        res.json(userSaved);
-    });
+    if(!req.body.email || !req.body.password || !req.body.username)
+    {
+        res.json({message: "Champs non rempli" });
+    } else {
+
+        var newUser = new User({
+            username: username,
+            email: email,
+            password: hash.hashPassword(password)
+        }).save().then(function (userSaved) {
+            res.json(userSaved);
+        });
+
+    }
 
 });
 
