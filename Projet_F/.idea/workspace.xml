@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90abe6a2-1940-4383-ad28-5c0408c58a00" name="Default" comment="" />
+    <list default="true" id="90abe6a2-1940-4383-ad28-5c0408c58a00" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/router/api/user/register.js" afterPath="$PROJECT_DIR$/web/router/api/user/register.js" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -34,10 +36,10 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/router/api/api_ext/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
+            <state relative-caret-position="68">
               <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
               <folding>
-                <element signature="e#0#41#0" expanded="false" />
+                <element signature="e#0#42#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -46,10 +48,10 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/router/api/api_ext/steam/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
+            <state relative-caret-position="68">
               <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
               <folding>
-                <element signature="e#0#41#0" expanded="false" />
+                <element signature="e#0#42#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -99,21 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="steam.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/router/api/api_ext/steam/steam.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="register.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/router/api/user/register.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+            <state relative-caret-position="510">
+              <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -485,12 +477,12 @@
       <workItem from="1490874969961" duration="2847000" />
       <workItem from="1490949370306" duration="5938000" />
       <workItem from="1491141289231" duration="3248000" />
-      <workItem from="1491148348864" duration="12074000" />
+      <workItem from="1491148348864" duration="12348000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48083000" />
+    <option name="totallyTimeSpent" value="48357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1077" extended-state="0" />
@@ -833,10 +825,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/router/api/api_ext/steam/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="68">
           <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
           <folding>
-            <element signature="e#0#41#0" expanded="false" />
+            <element signature="e#0#42#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -851,10 +843,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/router/api/api_ext/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="68">
           <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
           <folding>
-            <element signature="e#0#41#0" expanded="false" />
+            <element signature="e#0#42#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -905,8 +897,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/router/api/user/register.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        <state relative-caret-position="510">
+          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding />
         </state>
       </provider>

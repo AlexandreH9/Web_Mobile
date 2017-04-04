@@ -14,14 +14,21 @@ router.post('/', function(req, res) {
     var password = req.body.password;
     var idSteam = req.body.idSteam;
 
-    var newUser = new User({
-        username: username,
-        email: email,
-        password: hash.hashPassword(password),
-        idSteam: idSteam
-    }).save().then(function(userSaved) {
-        res.json(userSaved);
-    });
+    if(!req.body.email || !req.body.password || !req.body.username)
+    {
+        res.json({ message: 'Champ non rempli' });
+    } else {
+
+        var newUser = new User({
+            username: username,
+            email: email,
+            password: hash.hashPassword(password),
+            idSteam: idSteam
+        }).save().then(function (userSaved) {
+            res.json(userSaved);
+        });
+
+    }
 
 });
 
