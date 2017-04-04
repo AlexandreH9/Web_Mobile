@@ -1,6 +1,7 @@
 /**
  * Created by pierr on 04/04/2017.
  */
+var router = require('express').Router();
 var http = require('http');
 
 //info utilisateur
@@ -33,4 +34,4 @@ function getAccount(id, callback) {
 //     console.log(resultat.response.players[0].steamid);
 // });
 
-//module.exports.get = get;
+module.exports = router;

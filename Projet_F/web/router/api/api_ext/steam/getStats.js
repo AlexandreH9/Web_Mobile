@@ -1,6 +1,7 @@
 /**
  * Created by pierr on 04/04/2017.
  */
+var router = require('express').Router();
 var http = require('http');
 
 //info jeux 730:CSGO
@@ -31,5 +32,6 @@ getStats = function (id) {
     });
 }
 
+module.exports = router;
 // getStats('76561198182538293');
 //t;

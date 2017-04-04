@@ -1,6 +1,7 @@
 /**
  * Created by pierr on 04/04/2017.
  */
+var router = require('express').Router();
 var http = require('http');
 
 getGames = function (id) {
@@ -34,3 +35,4 @@ getGames = function (id) {
 // getGames('76561198182538293');
 
 //module.exports.get = get;
+module.exports = router;
