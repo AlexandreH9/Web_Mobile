@@ -77,17 +77,22 @@ router.post("/", function(req, res) {
     User.findOne({username: req.body.username}, function(err, user) {
         if (!user) {
                 res.status(401).json({message: 'User Nope'});
+        }
+        else {
+            console.log(user);
+            if (hash.hashPassword(req.body.password) != user.password) {
+
+                res.status(401).json({message: 'Mdp Nope'});
+
             }
-            else if (user) {
-                if (hash.hashPassword(req.body.password) != req.body.password) {
-                    res.status(401).json({message: 'Mdp Nope'});
-                }
-                else {
-                    var data = {id: user.id};
-                    var token = jwt.sign(data, jwtOptions.secretOrKey);
-                    res.json({message:'Yep', token: token});
-                }
+            else {
+
+                var data = {id: user.id};
+                var token = jwt.sign(data, jwtOptions.secretOrKey);
+                res.json({message: 'Yep', token: token});
+
             }
+        }
     });
 });
 
