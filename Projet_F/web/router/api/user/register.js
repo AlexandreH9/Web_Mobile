@@ -12,11 +12,13 @@ router.post('/', function(req, res) {
     var username = req.body.username;
     var email = req.body.email;
     var password = req.body.password;
+    var idSteam = req.body.idSteam;
 
     var newUser = new User({
         username: username,
         email: email,
-        password: hash.hashPassword(password)
+        password: hash.hashPassword(password),
+        idSteam: idSteam
     }).save().then(function(userSaved) {
         res.json(userSaved);
     });
