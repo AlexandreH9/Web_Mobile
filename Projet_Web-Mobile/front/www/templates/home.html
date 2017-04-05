@@ -1,0 +1,12 @@
+
+<ion-nav-view>
+  <ion-content>
+    <ion-list ng-controller="UserController">
+      <ion-item ng-repeat="user in users">
+        {{ user.username }} email : {{ user.email }}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-nav-view>
+

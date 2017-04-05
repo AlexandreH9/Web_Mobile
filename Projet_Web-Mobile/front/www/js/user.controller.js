@@ -1,7 +1,7 @@
 /**
  * Created by pierr on 04/04/2017.
  */
-angular.module('user')
+angular.module('starter')
   .controller('RegisterController', function($scope, $http){
     $scope.title = "Register";
 
@@ -29,4 +29,14 @@ angular.module('user')
   })
   .controller('LoginController', function($scope) {
     $scope.title = "Login";
+  })
+  .controller('UserController', function ($scope, $http) {
+
+    $http({
+      url : "/api/user/register",
+      method: "GET",
+    }).then(function (response) {
+      $scope.users = response.data;
+    })
+
   });
