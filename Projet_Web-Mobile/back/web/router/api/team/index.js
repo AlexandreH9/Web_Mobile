@@ -4,5 +4,6 @@
 var router = require('express').Router();
 
 router.use('/register', require('./register.js'));
+router.use('/search', required('./searchUser.js'));
 
 module.exports = router;

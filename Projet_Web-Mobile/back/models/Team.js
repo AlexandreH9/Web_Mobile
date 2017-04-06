@@ -7,7 +7,8 @@ var Schema = mongoose.Schema;
 var teamSchema = new Schema({
     teamname: String,
     email: String,
-    password: String
+    password: String,
+    players: [{type: Schema.Types.ObjectId, ref: 'User'}]
 });
 
 module.exports = mongoose.model('Team', teamSchema);
