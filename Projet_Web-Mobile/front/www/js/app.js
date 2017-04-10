@@ -27,20 +27,39 @@ angular.module('starter', ['ionic'])
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
-      .state('home' ,{
+      .state('begin' ,{
         url: '/',
+        templateUrl: 'templates/begin.html'
+      })
+      .state('home' ,{
+        url: '/home',
         templateUrl: 'templates/home.html'
+      })
+      .state('search', {
+        url: '/search',
+        templateUrl:'templates/search.html'
       })
       .state('settings', {
         url: '/settings',
         templateUrl:'templates/settings.html'
       })
+      .state('player' ,{
+        url: '/player',
+        templateUrl: 'templates/connexionPlayer.html'
+      })
+      .state('team' ,{
+        url: '/team',
+        templateUrl: 'templates/connexionTeam.html'
+      })
+
+
+
       .state('login', {
         url: '/login',
         templateUrl:'templates/login.html'
       })
       .state('otherwise', {
         url: '/',
-        templateUrl: 'templates/home.html'
+        templateUrl: 'templates/begin.html'
       })
   })

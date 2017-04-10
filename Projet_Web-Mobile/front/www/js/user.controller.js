@@ -2,14 +2,12 @@
  * Created by pierr on 04/04/2017.
  */
 angular.module('starter')
-  .controller('RegisterController', function($scope, $http){
+  .controller('RegisterUser', function($scope, $http){
     $scope.title = "Register";
 
     $scope.users = [];
 
     $scope.register = function() {
-      /*$scope.users.push($scope.user);
-       $scope.user = {};*/
 
       $http({
         method: 'POST',

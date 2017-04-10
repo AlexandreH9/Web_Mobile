@@ -1,1 +1,24 @@
-/* Empty. Add your own CSS if you like */
+body {
+  background-color: rgb(88, 88, 88);
+
+}
+
+.begin {
+  display: none;
+}
+
+.pictureConnection {
+  margin-top: 20%;
+  margin-left:40%;
+  width: 10%;
+
+}
+
+.home {
+  padding-top: 25%;
+}
+
+.teamOrPlayer {
+  width: 100% ;
+  margin-top: 10%;
+}
