@@ -22,3 +22,16 @@ body {
   width: 100% ;
   margin-top: 10%;
 }
+
+/**
+  Formulaire Utilisateur
+ */
+
+#loginPlayer {
+  display: none;
+}
+
+#buttonRegister {
+  background-color: #886aea;
+  color: #ffffff;
+}

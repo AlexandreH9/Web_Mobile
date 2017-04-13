@@ -3,9 +3,9 @@
  */
 angular.module('starter')
   .controller('RegisterUser', function($scope, $http){
-    $scope.title = "Register";
+    //$scope.title = "Register";
 
-    $scope.users = [];
+    //$scope.users = [];
 
     $scope.register = function() {
 
@@ -14,18 +14,21 @@ angular.module('starter')
         url: '/api/user/register',
         data: $scope.user
       }).then(function(response) {
-        $scope.user = {}
+        $scope.user = {};
       });
-    }
 
-    $scope.refresh = function() {
-      $http.get('/api/user/register').then(function(response) {
-        $scope.users = response.data;
-      });
-    }
+    };
+
+
+
+    // $scope.refresh = function() {
+    //   $http.get('/api/user/register').then(function(response) {
+    //     $scope.users = response.data;
+    //   });
+    // }
 
   })
-  .controller('LoginController', function($scope) {
+  .controller('loginUser', function($scope) {
     $scope.title = "Login";
   })
   .controller('UserController', function ($scope, $http) {
@@ -35,6 +38,35 @@ angular.module('starter')
       method: "GET",
     }).then(function (response) {
       $scope.users = response.data;
-    })
+    });
 
-  });
+  })
+//team
+  .controller('RegisterTeam', function($scope, $http){
+    $scope.title = "Register";
+
+    $scope.team = [];
+
+    $scope.register = function() {
+
+      $http({
+        method: 'POST',
+        url: '/api/team/register',
+        data: $scope.team
+      }).then(function(response) {
+        $scope.team = {};
+      });
+    };
+
+  })
+  .controller('TeamController', function ($scope, $http) {
+
+    $http({
+      url : "/api/team/register",
+      method: "GET",
+    }).then(function (response) {
+      $scope.teams = response.data;
+    });
+
+  })
+;
