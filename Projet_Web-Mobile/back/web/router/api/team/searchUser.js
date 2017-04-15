@@ -5,10 +5,15 @@
 var router = require('express').Router();
 var User = require('../../../../models/User.js');
 
-router.get('/', function(req, res) {
-    User.find({}).then(function(users) {
-        res.json(users);
+router.post("/", function(req, res) {
+    User.findOne({username: req.body.username}, function(err, user) {
+            if (!user) {
+                res.status(401).json({message: 'Bad username'});
+            }
+            else {
+                res.json(user);
+            }
+        });
     });
-});
 
 module.exports = router;
