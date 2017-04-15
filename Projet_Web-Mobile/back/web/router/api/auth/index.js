@@ -3,6 +3,7 @@
  */
 var router = require('express').Router();
 
-router.use('/authcontroller', require('./authcontroller.js'));
+router.use('/authUser', require('./authUser.js'));
+router.use('/authTeam', require('./authTeam.js'));
 
 module.exports = router;

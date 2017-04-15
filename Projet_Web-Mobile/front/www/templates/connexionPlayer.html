@@ -1,10 +1,14 @@
 <ion-view>
   <div ng-controller="RegisterUser">
-    <img src="../img/PLAYER-ICON.jpg" class="pictureConnection">
+    <img src="../img/PLAYER-ICON.jpg" class="pictureConnection" style="align-items: center">
 
     <div class="formReg">
-      <button id="buttonRegister" class="button " onclick="displayRegister()">Inscription </button>
-      <button id="buttonConnection" class="button " onclick="displayConnection()">Connexion </button>
+      <center>
+      <div class="col col-100">
+        <button id="buttonRegister" class="button " onclick="displayRegister()">Inscription </button>
+        <button id="buttonConnection" class="button " onclick="displayConnection()">Connexion </button>
+      </div>
+      </center>
 
       <form id="registerPlayer" ng-controller="RegisterUser">
         <div class="list list-inset">

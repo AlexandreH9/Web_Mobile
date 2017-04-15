@@ -11,11 +11,11 @@ function displayRegister() {
   reg.style.display = "inline";
   connect.style.display = "none";
 
-  //button
-  bReg.style.backgroundColor = "#886aea";
-  bReg.style.color = "#ffffff";
-  bConnect.style.backgroundColor = "#f8f8f8";
-  bConnect.style.color= "#585858";
+  // //button
+  // bReg.style.backgroundColor = "#886aea";
+  // bReg.style.color = "#ffffff";
+  // bConnect.style.backgroundColor = "#f8f8f8";
+  // bConnect.style.color= "#585858";
 
 }
 
@@ -29,7 +29,7 @@ function displayConnection() {
   connect.style.display = "inline";
 
   //button
-  bConnect.style.backgroundColor = "#886aea";
-  bReg.style.backgroundColor = "#f8f8f8";
+  // bConnect.style.backgroundColor = "#886aea";
+  // bReg.style.backgroundColor = "#f8f8f8";
 
 }
