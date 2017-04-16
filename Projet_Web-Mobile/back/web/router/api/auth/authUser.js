@@ -74,6 +74,8 @@ router.use(bodyParser.urlencoded({
 
 
 router.post("/", function(req, res) {
+    //console.log(req.body.user.username);
+    console.log(req.body.username);
     User.findOne({username: req.body.username}, function(err, user) {
         if (!user) {
                 res.status(401).json({message: 'User Nope'});

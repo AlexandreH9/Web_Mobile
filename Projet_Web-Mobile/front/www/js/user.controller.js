@@ -11,7 +11,7 @@ angular.module('starter')
 
       $http({
         method: 'POST',
-        url: '/api/user/register',
+        url: '/api/auth/registerUser',
         data: $scope.user
       }).then(function(response) {
         $scope.user = {};
@@ -28,13 +28,48 @@ angular.module('starter')
     // }
 
   })
-  .controller('loginUser', function($scope) {
-    $scope.title = "Login";
+  .controller('loginUser', function($scope, $http, $state) {
+
+
+    $scope.login = function () {
+      $http({
+        method: 'POST',
+        url: '/api/auth/authUser',
+        data: $scope.user
+      }).then(function (response) {
+
+        console.log(response.data.message);
+        if (response.data.message === 'Yep') {
+          localStorage.setItem('token', response.data.token);
+
+          $state.go("pHome");
+        }
+        else {
+          console.log("Authentification Failed");
+        }
+      });
+    };
   })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   .controller('UserController', function ($scope, $http) {
 
     $http({
-      url : "/api/user/register",
+      url : "/api/auth/registerUser",
       method: "GET",
     }).then(function (response) {
       $scope.users = response.data;
@@ -51,7 +86,7 @@ angular.module('starter')
 
       $http({
         method: 'POST',
-        url: '/api/team/register',
+        url: '/api/auth/registerTeam',
         data: $scope.team
       }).then(function(response) {
         $scope.team = {};
