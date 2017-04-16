@@ -79,6 +79,18 @@ body {
 #listStatsHome {
   margin-top: 25px;
 }
+
+#modif {
+  margin-top: 100px;
+}
+
+#listModif {
+  margin-top: 70px;
+}
+
+#search {
+  margin-top: 51px;
+}
 /*#buttonRegister {*/
   /*background-color: #886aea;*/
   /*color: #ffffff;*/
