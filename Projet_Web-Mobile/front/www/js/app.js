@@ -62,6 +62,11 @@ angular.module('starter', ['ionic'])//, 'ngStorage'])
         url: '/Player/step3',
         templateUrl: 'templates/Player/inscription/step3.html'
       })
+      .state('step4' ,{
+        url: '/Player/step4',
+        templateUrl: 'templates/Player/inscription/step4.html'
+      })
+
 
       //Path for team pages
       .state('team' ,{
