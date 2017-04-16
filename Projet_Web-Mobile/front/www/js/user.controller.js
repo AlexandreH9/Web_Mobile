@@ -35,13 +35,14 @@ angular.module('starter')
       $http({
         method: 'POST',
         url: '/api/auth/authUser',
-        data: $scope
+        data: $scope.user
       }).then(function (response) {
-        console.log(response.message);
-        if (response.message === 'Yep') {
-          localStorage.setItem('token', response.token);
 
-          //$state.go("pHome");
+        console.log(response.data.message);
+        if (response.data.message === 'Yep') {
+          localStorage.setItem('token', response.data.token);
+
+          $state.go("pHome");
         }
         else {
           console.log("Authentification Failed");
@@ -61,10 +62,14 @@ angular.module('starter')
 
 
 
+
+
+
+
   .controller('UserController', function ($scope, $http) {
 
     $http({
-      url : "/api/user/register",
+      url : "/api/auth/registerUser",
       method: "GET",
     }).then(function (response) {
       $scope.users = response.data;
