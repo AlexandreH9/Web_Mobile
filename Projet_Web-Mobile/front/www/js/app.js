@@ -34,15 +34,15 @@ angular.module('starter', ['ionic'])
 
       //Path for player pages
       .state('pHome' ,{
-        url: '/home',
+        url: '/Player/home',
         templateUrl: 'templates/Player/home.html'
       })
       .state('pSearch', {
-        url: '/search',
+        url: '/Player/search',
         templateUrl:'templates/Player/search.html'
       })
       .state('pSettings', {
-        url: '/settings',
+        url: '/Player/settings',
         templateUrl:'templates/Player/settings.html'
       })
       .state('player' ,{
@@ -55,10 +55,21 @@ angular.module('starter', ['ionic'])
         url: '/team',
         templateUrl: 'templates/Team/connexionTeam.html'
       })
+      .state('tHome' ,{
+        url: '/Team/home',
+        templateUrl: 'templates/Team/home.html'
+      })
+      .state('tSearch', {
+        url: '/Team/search',
+        templateUrl:'templates/Team/search.html'
+      })
+      .state('tSettings', {
+        url: '/Team/settings',
+        templateUrl:'templates/Team/settings.html'
+      })
 
 
 
-      
       .state('otherwise', {
         url: '/',
         templateUrl: 'templates/begin.html'
