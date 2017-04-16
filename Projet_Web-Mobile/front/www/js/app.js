@@ -49,6 +49,10 @@ angular.module('starter', ['ionic'])//, 'ngStorage'])
         url: '/player',
         templateUrl: 'templates/Player/connexionPlayer.html'
       })
+      .state('reorder' ,{
+        url: '/Player/reorder',
+        templateUrl: 'templates/Player/reorder.html'
+      })
 
       .state('step1' ,{
         url: '/Player/step1',

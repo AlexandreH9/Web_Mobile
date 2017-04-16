@@ -1,13 +1,32 @@
 
 <ion-nav-view>
-  <ion-content>
+
+  <div>
+    <img id="gameCsgo" src="../../../img/csgo-img.png">
+    <div>
+      <img id="pp" src=""><!-- récup la photo de profil steam -->
+    </div>
+    <button style="position:relative; left:70%;" ui-sref="reorder" class="button button-royal">
+      Reorder
+    </button>
+    <div id="listStatsHome">
+      <ul class="list">
+        <!-- exemple de Stat -->
+        <li class="item">
+          <!-- Nom de la stat + Valeur -->
+          Kill : 2
+        </li>
+      </ul>
+    </div>
+
+  <!--<ion-content>
     <ion-list ng-controller="UserController">
       <ion-item ng-repeat="user in users">
         {{ user.username }} email : {{ user.email }}
       </ion-item>
     </ion-list>
   </ion-content>
-  <!--<ion-pane>-->
+  <ion-pane>-->
     <!--<ion-header-bar class="bar-royal" id="header-bar">-->
       <!--<h1 class="title">Monster E-Sport</h1>-->
     <!--</ion-header-bar>-->

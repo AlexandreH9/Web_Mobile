@@ -75,6 +75,10 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+#listStatsHome {
+  margin-top: 25px;
+}
 /*#buttonRegister {*/
   /*background-color: #886aea;*/
   /*color: #ffffff;*/
