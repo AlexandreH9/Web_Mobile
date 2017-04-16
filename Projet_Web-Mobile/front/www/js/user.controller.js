@@ -38,6 +38,7 @@ angular.module('starter')
       });
     };
   })
+  //change data
   .controller('IdSteam', function($scope, $http, $state) {
     $scope.addId = function () {
       console.log("Debut");
@@ -50,6 +51,50 @@ angular.module('starter')
         }
       }).then(function(response) {
         console.log("ok");
+        $scope.message = response.data.message ;
+
+      });
+    };
+  })
+  .controller('username', function($scope, $http, $state) {
+    $scope.changeUser = function () {
+      $http({
+        method: 'POST',
+        url: '/api/user/change/username',
+        data: $scope.user,
+        headers : {
+          Authorization: localStorage.getItem('token')
+        }
+      }).then(function(response) {
+        $scope.message = response.data.message ;
+      });
+    };
+  })
+  .controller('password', function($scope, $http, $state) {
+    $scope.changePassword = function () {
+      $http({
+        method: 'POST',
+        url: '/api/user/change/password',
+        data: $scope.user,
+        headers : {
+          Authorization: localStorage.getItem('token')
+        }
+      }).then(function(response) {
+        $scope.message = response.data.message ;
+
+      });
+    };
+  })
+  .controller('email', function($scope, $http, $state) {
+    $scope.changeEmail = function () {
+      $http({
+        method: 'POST',
+        url: '/api/user/change/email',
+        data: $scope.user,
+        headers : {
+          Authorization: localStorage.getItem('token')
+        }
+      }).then(function(response) {
         $scope.message = response.data.message ;
 
       });

@@ -43,7 +43,7 @@ router.post("/email", function(req, res) {
 
 
 router.post("/password", function(req, res) {
-    User.findOne({password: req.user.password}, function(err, user) {
+    User.findOne({id: req.user.id}, function(err, user) {
         if (!user) {
             res.status(401).json({message: ''});
         }
