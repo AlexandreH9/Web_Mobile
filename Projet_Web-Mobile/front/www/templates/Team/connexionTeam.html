@@ -1,25 +1,21 @@
 <ion-view>
-  <div ng-controller="RegisterUser">
-    <img src="../img/PLAYER-ICON.jpg" class="pictureConnection" style="align-items: center">
+  <div ng-controller="RegisterTeam">
+    <img src="../../img/TEAM-ICON.jpg" class="pictureConnection">
 
     <div class="formReg">
-      <center>
-      <div class="col col-100">
-        <button id="buttonRegister" class="button " onclick="displayRegister()">Inscription </button>
-        <button id="buttonConnection" class="button " onclick="displayConnection()">Connexion </button>
-      </div>
-      </center>
+      <button id="buttonRegister" class="button " onclick="displayRegister()">Inscription </button>
+      <button id="buttonConnection" class="button " onclick="displayConnection()">Connexion </button>
 
       <form id="registerPlayer" ng-controller="RegisterUser">
         <div class="list list-inset">
           <label class="item item-input">
-            <input type="text" ng-model="user.username" placeholder="Username">
+            <input type="text" ng-model="team.teamname" placeholder="TeamName">
           </label>
           <label class="item item-input">
-            <input type="text" ng-model="user.email" placeholder="Email">
+            <input type="text" ng-model="team.email" placeholder="Email">
           </label>
           <label class="item item-input">
-            <input type="password" ng-model="user.password" placeholder="Password">
+            <input type="password" ng-model="team.password" placeholder="Password">
           </label>
         </div>
 
@@ -41,7 +37,8 @@
 
     </div>
 
-
   </div>
 
 </ion-view>
+
+
