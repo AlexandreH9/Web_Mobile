@@ -50,6 +50,19 @@ angular.module('starter', ['ionic'])
         templateUrl: 'templates/Player/connexionPlayer.html'
       })
 
+      .state('step1' ,{
+        url: '/Player/step1',
+        templateUrl: 'templates/Player/inscription/step1.html'
+      })
+      .state('step2' ,{
+        url: '/Player/step2',
+        templateUrl: 'templates/Player/inscription/step2.html'
+      })
+      .state('step3' ,{
+        url: '/Player/step3',
+        templateUrl: 'templates/Player/inscription/step3.html'
+      })
+
       //Path for team pages
       .state('team' ,{
         url: '/team',
