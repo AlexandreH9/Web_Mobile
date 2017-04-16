@@ -116,9 +116,6 @@ angular.module('starter')
   })
 //team
   .controller('RegisterTeam', function($scope, $http){
-    $scope.title = "Register";
-
-    $scope.team = [];
 
     $scope.register = function() {
 
@@ -132,6 +129,31 @@ angular.module('starter')
     };
 
   })
+  .controller('loginTeam', function($scope, $http, $state) {
+    $scope.login = function () {
+      $http({
+        method: 'POST',
+        url: '/api/auth/authTeam',
+        data: $scope.team
+      }).then(function (response) {
+
+        console.log(response.data.token);
+        if (response.data.message === 'Yep') {
+          localStorage.setItem('token', 'JWT ' + response.data.token);
+
+          $state.go("step1");
+        }
+        else {
+          console.log("Authentification Failed");
+        }
+      });
+    };
+  })
+
+
+
+
+
   .controller('TeamController', function ($scope, $http) {
 
     $http({
