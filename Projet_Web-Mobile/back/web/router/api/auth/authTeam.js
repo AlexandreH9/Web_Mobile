@@ -52,9 +52,9 @@ var strat = new Strategy(jwtOptions, function(data, done) {
     console.log('data received', data);
     Team.findOne({_id: data.id}, function(error, team) {
 
-        if (!team) {
-            res.status(401).json({message:"Nope ID"});
-        }
+        // if (!team) {
+        //     res.status(401).json({message:"Nope ID"});
+        // }
         if (team) {
             done(null, team)
         }
