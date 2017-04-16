@@ -28,7 +28,7 @@ angular.module('starter', ['ionic'])
 
     $stateProvider
       .state('begin' ,{
-        url: '/',
+        url: '/templates/begin',
         templateUrl: 'templates/begin.html'
       })
 

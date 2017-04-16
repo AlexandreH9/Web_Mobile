@@ -31,6 +31,33 @@ body {
   display: none;
 }
 
+#choosePlateform {
+  padding-top: 120px;
+  font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  text-align: center;
+}
+
+#message {
+  padding-top: 50px;
+  font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  text-align: center;
+}
+
+#gameCsgo {
+  width: 100%;
+}
+
+#gameRL {
+  width: 100%;
+}
+
+#listStats {
+  padding-top: 120px;
+}
+
+#saveButton {
+  margin-top: 20px;
+}
 /*#buttonRegister {*/
   /*background-color: #886aea;*/
   /*color: #ffffff;*/
