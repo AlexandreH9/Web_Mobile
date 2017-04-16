@@ -31,33 +31,34 @@ angular.module('starter', ['ionic'])
         url: '/',
         templateUrl: 'templates/begin.html'
       })
-      .state('home' ,{
+
+      //Path for player pages
+      .state('pHome' ,{
         url: '/home',
-        templateUrl: 'templates/home.html'
+        templateUrl: 'templates/Player/home.html'
       })
-      .state('search', {
+      .state('pSearch', {
         url: '/search',
-        templateUrl:'templates/search.html'
+        templateUrl:'templates/Player/search.html'
       })
-      .state('settings', {
+      .state('pSettings', {
         url: '/settings',
-        templateUrl:'templates/settings.html'
+        templateUrl:'templates/Player/settings.html'
       })
       .state('player' ,{
         url: '/player',
-        templateUrl: 'templates/connexionPlayer.html'
+        templateUrl: 'templates/Player/connexionPlayer.html'
       })
+
+      //Path for team pages
       .state('team' ,{
         url: '/team',
-        templateUrl: 'templates/connexionTeam.html'
+        templateUrl: 'templates/Team/connexionTeam.html'
       })
 
 
 
-      .state('login', {
-        url: '/login',
-        templateUrl:'templates/login.html'
-      })
+      
       .state('otherwise', {
         url: '/',
         templateUrl: 'templates/begin.html'
