@@ -59,4 +59,21 @@ router.post("/password", function(req, res) {
     });
 });
 
+router.post("/idSteam", function(req, res) {
+    User.findOne({idSteam: req.user.idSteam}, function(err, user) {
+        if (!user) {
+            res.status(401).json({message: ''});
+        }
+        else {
+            if(req.body.newIdSteam == null) {
+                res.status(401).json({message: 'Entrez un Id'});
+            }
+            else {
+                user.idSteam = req.body.newIdSteam;
+                user.save();
+            }
+        }
+    });
+});
+
 module.exports = router;

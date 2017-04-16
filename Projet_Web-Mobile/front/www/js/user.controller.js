@@ -3,9 +3,6 @@
  */
 angular.module('starter')
   .controller('RegisterUser', function($scope, $http){
-    //$scope.title = "Register";
-
-    //$scope.users = [];
 
     $scope.register = function() {
 
@@ -14,23 +11,14 @@ angular.module('starter')
         url: '/api/auth/registerUser',
         data: $scope.user
       }).then(function(response) {
-        $scope.user = {};
+        //$scope.user = {};
+
       });
 
     };
 
-
-
-    // $scope.refresh = function() {
-    //   $http.get('/api/user/register').then(function(response) {
-    //     $scope.users = response.data;
-    //   });
-    // }
-
   })
   .controller('loginUser', function($scope, $http, $state) {
-
-
     $scope.login = function () {
       $http({
         method: 'POST',
@@ -50,18 +38,18 @@ angular.module('starter')
       });
     };
   })
+  .controller('IdSteam', function($scope, $http, $state) {
+    $scope.addId = function () {
+      $http({
+        method: 'POST',
+        url: '/api/user/change/idSteam',
+        data: $scope.user
+      }).then(function(response) {
+        $scope.message = response.data.message ;
 
-
-
-
-
-
-
-
-
-
-
-
+      });
+    };
+  })
 
 
 
