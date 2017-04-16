@@ -82,7 +82,7 @@ router.post("/", function(req, res) {
         }
         else {
             console.log(user);
-            if (hash.hashPassword(req.body.password) != user.password) {
+            if (hash.hashPassword(req.body.password) !== user.password) {
 
                 res.status(401).json({message: 'Mdp Nope'});
 
