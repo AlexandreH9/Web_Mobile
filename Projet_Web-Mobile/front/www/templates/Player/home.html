@@ -2,13 +2,14 @@
 <ion-nav-view>
 
   <div>
-    <img id="gameCsgo" src="../../../img/csgo-img.png">
+    <img id="gameCsgo" style="z-index: 2" src="../../../img/csgo-img.png">
     <div>
-      <img id="pp" src=""><!-- récup la photo de profil steam -->
+      <img style="position: absolute ; z-index: 1" id="pp" src="../../../img/pp-test.png"><!-- récup la photo de profil steam -->
     </div>
     <button style="position:relative; left:70%;" ui-sref="reorder" class="button button-royal">
       Reorder
     </button>
+    <h3 style="padding-left: 20px"> Pseudo </h3><!-- Nom de l'utilisateur -->
     <div id="listStatsHome">
       <ul class="list">
         <!-- exemple de Stat -->
