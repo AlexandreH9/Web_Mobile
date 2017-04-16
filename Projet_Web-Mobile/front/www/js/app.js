@@ -93,6 +93,18 @@ angular.module('starter', ['ionic'])//, 'ngStorage'])
         url: '/Team/settings',
         templateUrl:'templates/Team/settings.html'
       })
+      .state('teamMember', {
+        url: '/Team/teamMember',
+        templateUrl:'templates/Team/teamMember.html'
+      })
+      .state('tprofil' ,{
+        url: '/Team/profil',
+        templateUrl: 'templates/Team/profil.html'
+      })
+      .state('tstep1' ,{
+        url: '/Team/step1',
+        templateUrl: 'templates/Team/inscription/step1.html'
+      })
 
 
 

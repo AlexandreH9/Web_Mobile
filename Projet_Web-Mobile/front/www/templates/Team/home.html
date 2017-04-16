@@ -1,12 +1,22 @@
 
 <ion-nav-view>
-  <ion-content>
-    <ion-list ng-controller="UserController">
-      <ion-item ng-repeat="user in users">
-        {{ user.username }} email : {{ user.email }}
-      </ion-item>
-    </ion-list>
-  </ion-content>
+  <div id="homeTeam">
+
+    <button style=" margin-top:30px ; position:relative; left:70%;" ui-sref="teamMember" class="button button-royal">
+      Gestion
+    </button>
+    <h3 style="padding-left: 20px"> Nom de la team </h3><!-- Nom de la team -->
+    <div id="listStatsHome">
+      <ul class="list">
+        <!-- liste des joueurs de la team -->
+        <div class="card">
+          <div class="item item-text-wrap" style="background-color: #f0f0f0" ui-sref=""><!-- renvois à la page du player -->
+            <!-- nom du player -->
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
 
   <!--<ion-pane>-->
     <!--<ion-header-bar class="bar-royal" id="header-bar">-->
