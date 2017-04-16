@@ -26,11 +26,11 @@ angular.module('starter')
         data: $scope.user
       }).then(function (response) {
 
-        console.log(response.data.message);
+        console.log(response.data.token);
         if (response.data.message === 'Yep') {
-          localStorage.setItem('token', response.data.token);
+          localStorage.setItem('token','JWT ' + response.data.token);
 
-          $state.go("pHome");
+          $state.go("step1");
         }
         else {
           console.log("Authentification Failed");
@@ -40,11 +40,16 @@ angular.module('starter')
   })
   .controller('IdSteam', function($scope, $http, $state) {
     $scope.addId = function () {
+      console.log("Debut");
       $http({
         method: 'POST',
         url: '/api/user/change/idSteam',
-        data: $scope.user
+        data: $scope.user,
+        headers : {
+          Authorization: localStorage.getItem('token')
+        }
       }).then(function(response) {
+        console.log("ok");
         $scope.message = response.data.message ;
 
       });

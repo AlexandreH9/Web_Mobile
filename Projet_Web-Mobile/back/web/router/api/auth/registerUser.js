@@ -15,7 +15,7 @@ router.post('/', function(req, res) {
     var username = req.body.username;
     var email = req.body.email;
     var password = req.body.password;
-    var idSteam = req.body.idSteam;
+    var idSteam = 0 ;
 
     if(!req.body.email || !req.body.password || !req.body.username)
     {
