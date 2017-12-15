@@ -1,11 +1,16 @@
 var router = require('express').Router();
 var User = require('../../../../models/User');
 var hash = require('../../../../helpers/hash');
+var passport = require('passport');
 
-router.get('/', function(req, res) {
+router.get('/', passport.authenticate('jwt', {session: false}), function(req, res) {
     User.find({}).then(function(users) {
         res.json(users);
     });
+});
+
+router.get('/test', (req, res) => {
+    res.json("Test");
 });
 
 router.post('/', function(req, res) {
